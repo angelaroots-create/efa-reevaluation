@@ -17,7 +17,7 @@
   <section class="card" aria-labelledby="q-reason">
     <p class="step">Step 1 of 2</p>
     <h2 id="q-reason">Why was the expense denied?</h2>
-    <p class="sub">Choose the reason given in your denial notice in ClassWallet.</p>
+    <p class="sub">Choose the reason given in the comments on your rejection notice email from ClassWallet.</p>
 
     <fieldset>
       <legend hidden>Denial reason</legend>
@@ -54,9 +54,9 @@
     <div id="step-date" hidden>
       <div class="divider"></div>
       <p class="step">Step 2 of 2</p>
-      <h2>When was the denial notice sent?</h2>
-      <p class="sub">Use the date shown on the denial notice. The <span data-days></span> business days start the day after this date.</p>
-      <label class="field" for="denial-date">Date denial notice was sent</label>
+      <h2>When was the rejection notice sent?</h2>
+      <p class="sub">Use the date shown on the rejection notice email. The <span data-days></span> business days start the day after this date.</p>
+      <label class="field" for="denial-date">Date rejection notice was sent</label>
       <input type="date" id="denial-date">
 
       <div id="result-open" class="msg blue" hidden role="status" aria-live="polite">
@@ -67,11 +67,11 @@
       </div>
       <div id="result-closed" class="msg red" hidden role="status" aria-live="polite">
         <h3>The deadline for this expense has passed</h3>
-        <p>Requests must be submitted within <span data-days></span> business days of the date the denial notice was sent. The deadline for a notice sent <span id="closed-notice"></span> was <strong id="closed-deadline"></strong>, so this request cannot be accepted.</p>
+        <p>Requests must be submitted within <span data-days></span> business days of the date the rejection notice was sent. The deadline for a notice sent <span id="closed-notice"></span> was <strong id="closed-deadline"></strong>, so this request cannot be accepted.</p>
         <p class="cite">6 CAR § 35-113(a)(1)(C)</p>
       </div>
       <div id="result-future" class="msg amber" hidden role="status" aria-live="polite">
-        <p>That date is in the future. Please enter the date shown on your denial notice.</p>
+        <p>That date is in the future. Please enter the date shown on your rejection notice email.</p>
       </div>
     </div>
   </section>
@@ -79,7 +79,7 @@
   <aside class="card" aria-labelledby="how">
     <h2 id="how">How reevaluation works</h2>
     <ol>
-      <li>Submit within <strong><span data-days></span> business days</strong> of the date your denial notice was sent. Late requests are not accepted.<span class="cite">6 CAR § 35-113(a)(1)(C)</span></li>
+      <li>Submit within <strong><span data-days></span> business days</strong> of the date your rejection notice was sent. Late requests are not accepted.<span class="cite">6 CAR § 35-113(a)(1)(C)</span></li>
       <li>Include new documentation or clarifying information that answers the reason for the denial.<span class="cite">6 CAR § 35-113(a)(1)(B)</span></li>
       <li>If the expense is not a core educational expense, you may be asked for more information first.<span class="cite">6 CAR § 35-113(a)(1)(D)</span></li>
       <li>The reevaluation is conducted in consultation with a supervisor.<span class="cite">6 CAR § 35-113(a)(1)(E)</span></li>
