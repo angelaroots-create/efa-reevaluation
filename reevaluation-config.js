@@ -16,8 +16,8 @@ window.EFA_CONFIG = {
 
   // Where families go with questions (shown in "contact the EFA program office" messages).
   // Replace with the office email, phone, or contact page.
-  officeContactText: "[EFA program office contact]",
-  officeContactHref: "",   // e.g. "mailto:office@example.gov" or a web address; leave "" for plain text
+  officeContactText: "help@schoolchoicear.org",
+  officeContactHref: "mailto:help@schoolchoicear.org",   // e.g. "mailto:office@example.gov" or a web address; leave "" for plain text
 
   // Number of business days families have to submit.
   businessDays: 15,
