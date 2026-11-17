@@ -40,3 +40,5 @@ aside ol{padding-left:20px;margin:8px 0}
 aside li{margin-bottom:10px}
 aside .cite{display:block}
 footer{max-width:1040px;margin:0 auto 32px;padding:0 24px;font-size:.85rem;color:var(--muted)}
+/* Final review page: navy accent to tell it apart from the reevaluation page */
+body[data-form="final"]{--teal:#2b4a6f;--teal-bg:#e4ebf3}
