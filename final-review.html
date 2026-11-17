@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EFA Final Review Request | Arkansas Department of Education</title>
+<link rel="stylesheet" href="reevaluation.css">
+</head>
+<body data-form="final">
+<header><div class="wrap">
+  <h1>Request a Final Review</h1>
+  <p>Arkansas Children's Educational Freedom Account Program</p>
+</div></header>
+<nav>Haven't requested a reevaluation yet? <a href="reevaluation.html">Start with an expense reevaluation</a>.</nav>
+
+<main>
+  <section class="card" aria-labelledby="q-prior">
+    <p class="step">Step 1 of 2</p>
+    <h2 id="q-prior">Was your reevaluation request denied?</h2>
+    <p class="sub">A final review is available only after an expense has been reevaluated and denied a second time.</p>
+    <fieldset>
+      <legend hidden>Reevaluation status</legend>
+      <label class="option"><input type="radio" name="prior" value="yes">
+        <div><strong>Yes, I received a reevaluation denial</strong>
+        <span>I requested a reevaluation and was told the expense was denied again.</span></div></label>
+      <label class="option"><input type="radio" name="prior" value="no">
+        <div><strong>No, my expense was denied once</strong>
+        <span>I have not requested a reevaluation, or I am still waiting for a decision.</span></div></label>
+    </fieldset>
+
+    <div id="msg-noprior" class="msg amber" hidden role="status">
+      <h3>Start with a reevaluation request</h3>
+      <p>An expense must go through an individual expense reevaluation before a final review. If your expense was denied once, <a href="reevaluation.html">request a reevaluation</a>. If you are waiting for a reevaluation decision, you will receive it by email.</p>
+      <p class="cite">6 CAR § 35-113(a)(2)(A)</p>
+    </div>
+
+    <div id="step-date" hidden>
+      <div class="divider"></div>
+      <p class="step">Step 2 of 2</p>
+      <h2>When was the reevaluation denial sent?</h2>
+      <p class="sub">Use the date on the notice telling you the reevaluation was denied. The <span data-days></span> business days start the day after this date.</p>
+      <label class="field" for="denial-date">Date reevaluation denial was sent</label>
+      <input type="date" id="denial-date">
+
+      <div id="result-open" class="msg blue" hidden role="status" aria-live="polite">
+        <p>Your deadline to submit <span class="deadline" id="deadline-date"></span></p>
+        <p class="hint">11:59 p.m. Central &middot; <span id="days-left"></span></p>
+        <a class="button" id="form-link" href="#" target="_blank" rel="noopener">Start your final review request</a>
+        <p class="hint">The request form opens in a new tab with your denial date filled in. If you have additional documents, email them to <a data-email></a> with your ClassWallet order number in the subject line.</p>
+      </div>
+      <div id="result-closed" class="msg red" hidden role="status" aria-live="polite">
+        <h3>The deadline for a final review has passed</h3>
+        <p>Final review requests must be submitted within <span data-days></span> business days of the date the reevaluation denial was sent. The deadline for a denial sent <span id="closed-notice"></span> was <strong id="closed-deadline"></strong>, so this request cannot be accepted.</p>
+        <p class="cite">6 CAR § 35-113(a)(2)(B)</p>
+      </div>
+      <div id="result-future" class="msg amber" hidden role="status" aria-live="polite">
+        <p>That date is in the future. Please enter the date shown on your reevaluation denial.</p>
+      </div>
+    </div>
+  </section>
+
+  <aside class="card" aria-labelledby="how">
+    <h2 id="how">How final review works</h2>
+    <ol>
+      <li>A final review is available after a reevaluation results in a second denial.<span class="cite">6 CAR § 35-113(a)(2)(A)</span></li>
+      <li>Submit within <strong><span data-days></span> business days</strong> of the date you were told the reevaluation was denied. Late requests are not accepted.<span class="cite">6 CAR § 35-113(a)(2)(B)</span></li>
+      <li>The final approval or denial is made with the approval of the assistant commissioner or director overseeing the program.<span class="cite">6 CAR § 35-113(a)(2)(C)</span></li>
+      <li>You will receive the final determination in writing.<span class="cite">6 CAR § 35-113(a)(2)(D)</span></li>
+    </ol>
+    <p class="hint">Business days exclude weekends and Arkansas state holidays.</p>
+    <p class="hint">Documents: <a data-email></a></p>
+  </aside>
+</main>
+<footer>Arkansas Department of Education &middot; Division of Elementary and Secondary Education</footer>
+
+<script src="reevaluation-config.js"></script>
+<script src="reevaluation-deadline.js"></script>
+<script src="reevaluation-screening.js"></script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EFA Expense Reevaluation Request | Arkansas Department of Education</title>
+<link rel="stylesheet" href="reevaluation.css">
+</head>
+<body data-form="reevaluation">
+<header><div class="wrap">
+  <h1>Request an Expense Reevaluation</h1>
+  <p>Arkansas Children's Educational Freedom Account Program</p>
+</div></header>
+<nav>Already received a reevaluation denial? <a href="final-review.html">Request a final review</a>.</nav>
+
+<main>
+  <section class="card" aria-labelledby="q-reason">
+    <p class="step">Step 1 of 2</p>
+    <h2 id="q-reason">Why was the expense denied?</h2>
+    <p class="sub">Choose the reason given in your denial notice in ClassWallet.</p>
+
+    <fieldset>
+      <legend hidden>Denial reason</legend>
+      <label class="option"><input type="radio" name="reason" value="eligibility">
+        <div><strong>The expense was found not to meet eligibility requirements</strong>
+        <span>For example: not ordinary and necessary, not educational for this student, or the cost was more than is typical.</span></div></label>
+      <label class="option"><input type="radio" name="reason" value="listed">
+        <div><strong>The item is on the nonqualifying expense list or is prohibited by law or rule</strong>
+        <span>For example: equipment or travel for competitive sports, or televisions and video game consoles.</span></div></label>
+      <label class="option"><input type="radio" name="reason" value="technical">
+        <div><strong>There was a problem with documentation or a technical error</strong>
+        <span>For example: missing or unreadable receipt, not itemized, no proof of payment, amount mismatch, wrong vendor, or a duplicate.</span></div></label>
+    </fieldset>
+    <p class="hint">Not sure why your expense was denied? Check the denial note on the transaction in ClassWallet, or contact <span data-contact></span> before submitting.</p>
+
+    <div id="msg-listed" class="msg red" hidden role="status">
+      <h3>This expense will not be approved through reevaluation</h3>
+      <p>Items on the Department's nonqualifying expense list have already received a final determination, and items excluded by law or rule cannot be paid with EFA funds. Examples include equipment and travel costs for competitive sports (6 CAR § 35-102(13)(B)(ii)) and televisions, video game consoles, and home theater or audio equipment (6 CAR § 35-102(26)(Q)(ii)).</p>
+      <p>Please review the nonqualifying expense list before making a similar purchase. If you believe the item was placed on the list by mistake, contact <span data-contact></span>.</p>
+      <p><a href="#" id="proceed-listed">I still want to submit a reevaluation request</a></p>
+      <p class="cite">6 CAR § 35-111(a)(2)(I)</p>
+    </div>
+
+    <div id="msg-technical" class="msg amber" hidden role="status">
+      <h3>Correct and resubmit this expense in ClassWallet</h3>
+      <p>Denials for documentation or technical errors do not need a reevaluation. Fix the issue and submit the expense again in ClassWallet. Common fixes:</p>
+      <ul>
+        <li>Upload an itemized receipt or invoice that shows the vendor, items, date, and amount</li>
+        <li>Add proof of payment for a reimbursement</li>
+        <li>Make sure the amount matches the receipt and the vendor is correct</li>
+      </ul>
+    </div>
+
+    <div id="step-date" hidden>
+      <div class="divider"></div>
+      <p class="step">Step 2 of 2</p>
+      <h2>When was the denial notice sent?</h2>
+      <p class="sub">Use the date shown on the denial notice. The <span data-days></span> business days start the day after this date.</p>
+      <label class="field" for="denial-date">Date denial notice was sent</label>
+      <input type="date" id="denial-date">
+
+      <div id="result-open" class="msg blue" hidden role="status" aria-live="polite">
+        <p>Your deadline to submit <span class="deadline" id="deadline-date"></span></p>
+        <p class="hint">11:59 p.m. Central &middot; <span id="days-left"></span></p>
+        <a class="button" id="form-link" href="#" target="_blank" rel="noopener">Start your reevaluation request</a>
+        <p class="hint">The request form opens in a new tab with your denial date filled in. After you submit it, email your supporting documents to <a data-email></a> with your ClassWallet order number in the subject line.</p>
+      </div>
+      <div id="result-closed" class="msg red" hidden role="status" aria-live="polite">
+        <h3>The deadline for this expense has passed</h3>
+        <p>Requests must be submitted within <span data-days></span> business days of the date the denial notice was sent. The deadline for a notice sent <span id="closed-notice"></span> was <strong id="closed-deadline"></strong>, so this request cannot be accepted.</p>
+        <p class="cite">6 CAR § 35-113(a)(1)(C)</p>
+      </div>
+      <div id="result-future" class="msg amber" hidden role="status" aria-live="polite">
+        <p>That date is in the future. Please enter the date shown on your denial notice.</p>
+      </div>
+    </div>
+  </section>
+
+  <aside class="card" aria-labelledby="how">
+    <h2 id="how">How reevaluation works</h2>
+    <ol>
+      <li>Submit within <strong><span data-days></span> business days</strong> of the date your denial notice was sent. Late requests are not accepted.<span class="cite">6 CAR § 35-113(a)(1)(C)</span></li>
+      <li>Include new documentation or clarifying information that answers the reason for the denial.<span class="cite">6 CAR § 35-113(a)(1)(B)</span></li>
+      <li>If the expense is not a core educational expense, you may be asked for more information first.<span class="cite">6 CAR § 35-113(a)(1)(D)</span></li>
+      <li>The reevaluation is conducted in consultation with a supervisor.<span class="cite">6 CAR § 35-113(a)(1)(E)</span></li>
+      <li>If it is denied again, you may <a href="final-review.html">request a final review</a> within <span data-days></span> business days of that notice. The final decision is made in writing with the approval of the assistant commissioner or program director.<span class="cite">6 CAR § 35-113(a)(2)(B)-(D)</span></li>
+    </ol>
+    <p class="hint">Business days exclude weekends and Arkansas state holidays.</p>
+    <p class="hint">Documents: <a data-email></a></p>
+  </aside>
+</main>
+<footer>Arkansas Department of Education &middot; Division of Elementary and Secondary Education</footer>
+
+<script src="reevaluation-config.js"></script>
+<script src="reevaluation-deadline.js"></script>
+<script src="reevaluation-screening.js"></script>
+</body>
+</html>
